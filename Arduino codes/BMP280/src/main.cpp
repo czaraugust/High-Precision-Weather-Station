@@ -10,7 +10,9 @@
 #include <SPI.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
+#include <BH1750.h>
 
+BH1750 lightMeter;
 
 
 #define SEALEVELPRESSURE_HPA (1013.25)
@@ -23,6 +25,11 @@ void printValues();
 void setup() {
     Serial.begin(9600);
     Serial.println(F("BME280 test"));
+
+    Wire.begin();
+    lightMeter.begin();
+    Serial.println(F("BH1750 Test"));
+
 
     bool status;
 
@@ -48,6 +55,15 @@ void loop() {
 
 
 void printValues() {
+
+
+  uint16_t lux = lightMeter.readLightLevel();
+  Serial.print("Light: ");
+  Serial.print(lux);
+  Serial.println(" lx");
+
+
+
     Serial.print("Temperature = ");
     Serial.print(bme.readTemperature());
     Serial.println(" *C");
