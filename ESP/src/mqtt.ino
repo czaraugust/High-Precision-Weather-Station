@@ -54,6 +54,31 @@ void loop()
     valorAnalog = analogRead(0);
     Serial.println(valorAnalog);
 
+	if(valorAnalog >= 105 && valorAnalog <= 115){
+      Serial.println(" NO");
+    }
+    else if(valorAnalog >= 115 && valorAnalog <= 125){
+      Serial.println(" O");
+    }
+    else if(valorAnalog >= 135 && valorAnalog <= 145){
+      Serial.println(" SO");
+    }
+    else if(valorAnalog >= 160 && valorAnalog <= 170){
+      Serial.println(" S");
+    }
+    else if(valorAnalog >= 195 && valorAnalog <= 205){
+      Serial.println(" SE");
+    }
+    else if(valorAnalog >= 240 && valorAnalog <= 250){
+      Serial.println(" E");
+    }
+    else if(valorAnalog >= 325 && valorAnalog <= 335){
+      Serial.println(" NE");
+    }
+    else if(valorAnalog >= 490 && valorAnalog <= 500){
+      Serial.println(" N");
+    }
+
     printTime = millis();
   }
 
