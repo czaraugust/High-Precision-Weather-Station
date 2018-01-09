@@ -4,11 +4,11 @@
 *******************PINO D1 E D2 DO NOCEMCU**************************
 
 
- ***************************************************************************/
+***************************************************************************/
 
 
 /************************
-       BIBLIOTECAS
+      BIBLIOTECAS
 ************************/
 
 
@@ -20,33 +20,35 @@
 
 
 /************************
-       DEFINIÇÕES
+        DEFINIÇÕES
 ************************/
 
 
 #define Hall sensor 16  //Definição do Pino do anemômetro
 #define SEALEVELPRESSURE_HPA (1013.25) //Presssão ao nível do mar. Usado para o cálculo de Altitude
-
+unsigned long delayTime =  5000;
 
 /********************************************
-       INICIALIZAÇÃO DO SENSORES
+            DECLARAÇÃO DO SENSORES I2C
 *********************************************/
 Adafruit_BME280 bme; // I2C
 BH1750 lightMeter;
 
-unsigned long delayTime;
+
 
 /********************************************
-       DEFINIÇÃO DE CONSTANTES DO ANEMÔMETRO
+                  ANEMÔMETRO
 *********************************************/
 
+//          DEFINIÇÃO DE CONSTANTES
 const int anemoPin = 12;
 const float pi = 3.14159265;           // Numero pi
 int period = 5000;               // Tempo de medida(miliseconds)
 int delaytime = 5000;             // Time between samples (miliseconds)
 int radius = 147;      // Raio do anemometro(mm)
 long delayWhile = 0;
-//  Variable definitions
+
+//          DEFINIÇÃO DE VARIÁVEIS
 unsigned int Sample = 0;   // Sample number
 unsigned int counter = 0; // magnet counter for sensor
 unsigned int RPM = 0;          // Revolutions per minute
@@ -55,88 +57,152 @@ float windspeed = 0;           // Wind speed (km/h)
 long readTime = 0;
 
 
+/********************************************
+                  PLUVIÔMETRO
+*********************************************/
 
+//          DEFINIÇÃO DE CONSTANTES
+const int pluvPin = 14;              //The reed switch outputs to digital pin 9
 
-
-
-
-
-
-
-
+//          DEFINIÇÃO DE VARIÁVEIS
+int val = 0;                    //Current value of reed switch
+int old_val = 0;                //Old value of reed switch
+int reedcount = 0;              //This is the variable that hold the count of switching
+long printTime = 0;
+int valorAnalog = 0;
+int generalCount =0;
 
 
 void printValues();
-
+void addcount();
+void addReedcount();
+/********************************************
+                  SETUP
+*********************************************/
 void setup() {
-    Serial.begin(9600);
-    Serial.println(F("BME280 test"));
+//      SETUP DOS PINOS
+  // Anemometro
+  pinMode(anemoPin, INPUT_PULLUP);
+  // Pluviometro
+  pinMode(pluvPin, INPUT_PULLUP);
 
-    Wire.begin();
-    lightMeter.begin();
-    Serial.println(F("BH1750 Test"));
+  printTime = millis();
+  readTime = millis();
 
+  //    INICIALIZAÇÃO DOS SENSORES
+  Serial.begin(9600);
+  Wire.begin();
+  lightMeter.begin();
+  bme.begin();
 
-    bool status;
-
-    // default settings
-    // (you can also pass in a Wire library object like &Wire2)
-    status = bme.begin();
-    if (!status) {
-        Serial.println("Could not find a valid BME280 sensor, check wiring!");
-        while (1);
-    }
-
-    Serial.println("-- Default Test --");
-    delayTime = 5000;
-
-    Serial.println();
+  Serial.println();
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/********************************************
+                  LOOP
+*********************************************/
 
 void loop() {
-    printValues();
-    delay(delayTime);
+  printValues();
+  delay(delayTime);
+
+
+
 }
 
 
 void printValues() {
 
+  /********************************************
+                    LUXÍMETRO
+  *********************************************/
 
   uint16_t lux = lightMeter.readLightLevel();
   Serial.print("Light: ");
   Serial.print(lux);
   Serial.println(" lx");
 
+  /********************************************
+                    TERMÔMETRO
+  *********************************************/
 
+  Serial.print("Temperature = ");
+  Serial.print(bme.readTemperature());
+  Serial.println(" ºC");
 
-    Serial.print("Temperature = ");
-    Serial.print(bme.readTemperature());
-    Serial.println(" *C");
+  /********************************************
+                    BARÔMETRO
+  *********************************************/
 
-    Serial.print("Pressure = ");
+  Serial.print("Pressure = ");
+  Serial.print(bme.readPressure() / 100.0F);
+  Serial.println(" hPa");
 
-    Serial.print(bme.readPressure() / 100.0F);
-    Serial.println(" hPa");
+  /********************************************
+                    ALTÍMETRO
+  *********************************************/
 
-    Serial.print("Approx. Altitude = ");
-    Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
-    Serial.println(" m");
+  Serial.print("Approx. Altitude = ");
+  Serial.print(bme.readAltitude(SEALEVELPRESSURE_HPA));
+  Serial.println(" m");
 
-    Serial.print("Humidity = ");
-    Serial.print(bme.readHumidity());
-    Serial.println(" %");
+  /********************************************
+                    HIGRÔMETRO
+  *********************************************/
 
+  Serial.print("Humidity = ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %");
+
+  /********************************************
+                    ANEMÔMETRO
+  *********************************************/
+
+  if(millis() > readTime){
+    RPM=((counter)*60)/(period/1000);  // Calculate revolutions per minute (RPM)
+    windspeed = ((4 * pi * radius * RPM)/60) / 1000;  // Calculate wind speed on m/s
+    speedwind = (((4 * pi * radius * RPM)/60) / 1000)*3.6;  // Calculate wind speed on km/h
+
+    // Anemometro
+    Serial.print("Wind speed: ");
+    Serial.print(windspeed);
+    Serial.print(" [m/s] ");
+    Serial.print(speedwind);
+    Serial.print(" [km/h] ");
     Serial.println();
+
+    speedwind = 0;
+    windspeed = 0;
+    //Serial.println(counter);
+    counter = 0;
+    attachInterrupt(anemoPin, addcount, RISING);
+
+    readTime = millis() + period;
+  }
+
+  /********************************************
+                    PLUVIÔMETRO
+  *********************************************/
+
+attachInterrupt(pluvPin,addReedcount, FALLING);
+Serial.print("Accumulated rainfall in the past 24 hrs: ");
+Serial.print(reedcount*0.25);
+Serial.println(" mm");
+Serial.println();
+generalCount++;
+if (generalCount >= 17280){ //24 horas
+    generalCount =0;
+    reedcount =0;
+
+}
+
+
+}
+
+void addReedcount(){
+  reedcount++;
+
+}
+void addcount(){
+  counter++;
 }

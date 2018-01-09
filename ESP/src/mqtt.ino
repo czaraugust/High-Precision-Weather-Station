@@ -45,7 +45,7 @@ void setup()
 
 void loop()
 {
-  Sample++;
+  //Sample++;
   //Serial.print("Sample: ");
   //Serial.println(Sample);
 
