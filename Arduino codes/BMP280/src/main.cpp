@@ -1,16 +1,7 @@
-/***************************************************************************
-
-
-*******************PINO D1 E D2 DO NOCEMCU**************************
-
-
-***************************************************************************/
-
 
 /************************
       BIBLIOTECAS
 ************************/
-
 
 #include <Wire.h>
 #include <SPI.h>
@@ -23,17 +14,14 @@
         DEFINIÇÕES
 ************************/
 
-
-#define Hall sensor 16  //Definição do Pino do anemômetro
 #define SEALEVELPRESSURE_HPA (1013.25) //Presssão ao nível do mar. Usado para o cálculo de Altitude
 unsigned long delayTime =  5000;
-
+int valorAnalog = 0;
 /********************************************
             DECLARAÇÃO DO SENSORES I2C
 *********************************************/
 Adafruit_BME280 bme; // I2C
 BH1750 lightMeter;
-
 
 
 /********************************************
@@ -69,13 +57,13 @@ int val = 0;                    //Current value of reed switch
 int old_val = 0;                //Old value of reed switch
 int reedcount = 0;              //This is the variable that hold the count of switching
 long printTime = 0;
-int valorAnalog = 0;
 int generalCount =0;
 
 
 void printValues();
 void addcount();
 void addReedcount();
+
 /********************************************
                   SETUP
 *********************************************/
@@ -105,8 +93,6 @@ void setup() {
 void loop() {
   printValues();
   delay(delayTime);
-
-
 
 }
 
@@ -188,14 +174,45 @@ attachInterrupt(pluvPin,addReedcount, FALLING);
 Serial.print("Accumulated rainfall in the past 24 hrs: ");
 Serial.print(reedcount*0.25);
 Serial.println(" mm");
-Serial.println();
+
 generalCount++;
 if (generalCount >= 17280){ //24 horas
     generalCount =0;
     reedcount =0;
 
 }
+/********************************************
+                  ANEMOSCÓPIO
+*********************************************/
+valorAnalog = analogRead(0);
+Serial.println(valorAnalog);
 
+  if(valorAnalog >= 105 && valorAnalog < 115){
+    Serial.println(" NO");
+  }
+  else if(valorAnalog >= 115 && valorAnalog <= 125){
+    Serial.println(" O");
+  }
+  else if(valorAnalog >= 135 && valorAnalog <= 145){
+    Serial.println(" SO");
+  }
+  else if(valorAnalog >= 160 && valorAnalog <= 170){
+    Serial.println(" S");
+  }
+  else if(valorAnalog >= 195 && valorAnalog <= 205){
+    Serial.println(" SE");
+  }
+  else if(valorAnalog >= 240 && valorAnalog <= 250){
+    Serial.println(" E");
+  }
+  else if(valorAnalog >= 325 && valorAnalog <= 335){
+    Serial.println(" NE");
+  }
+  else if(valorAnalog >= 490 && valorAnalog <= 500){
+    Serial.println(" N");
+  }
+
+Serial.println();
 
 }
 
