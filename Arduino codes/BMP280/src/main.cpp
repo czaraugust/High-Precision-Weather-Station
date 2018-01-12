@@ -8,6 +8,45 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
 #include <BH1750.h>
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
+
+/************************
+        MQTT
+************************/
+
+const char* ssid = "EASY";
+const char* password = "tv123456";
+const char* mqtt_server = "192.168.0.168";
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+void setup_wifi() {
+
+  /*WiFi.mode(WIFI_STA);
+  WiFi.disconnect();*/
+  delay(10);
+  // We start by connecting to a WiFi network
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+
+ /*while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }*/
+
+  //randomSeed(micros());
+
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
 
 
 /************************
@@ -185,30 +224,30 @@ if (generalCount >= 17280){ //24 horas
                   ANEMOSCÓPIO
 *********************************************/
 valorAnalog = analogRead(0);
-Serial.println(valorAnalog);
+//Serial.println(valorAnalog);
 
-  if(valorAnalog >= 105 && valorAnalog < 115){
+  if(valorAnalog >= 100 && valorAnalog < 135){
     Serial.println(" NO");
   }
-  else if(valorAnalog >= 115 && valorAnalog <= 125){
+  else if(valorAnalog >= 135 && valorAnalog < 155){
     Serial.println(" O");
   }
-  else if(valorAnalog >= 135 && valorAnalog <= 145){
+  else if(valorAnalog >= 155 && valorAnalog < 175){
     Serial.println(" SO");
   }
-  else if(valorAnalog >= 160 && valorAnalog <= 170){
+  else if(valorAnalog >= 175 && valorAnalog < 200){
     Serial.println(" S");
   }
-  else if(valorAnalog >= 195 && valorAnalog <= 205){
+  else if(valorAnalog >= 200 && valorAnalog <= 240){
     Serial.println(" SE");
   }
-  else if(valorAnalog >= 240 && valorAnalog <= 250){
+  else if(valorAnalog >= 240 && valorAnalog <= 300){
     Serial.println(" E");
   }
-  else if(valorAnalog >= 325 && valorAnalog <= 335){
+  else if(valorAnalog >= 300 && valorAnalog <= 400){
     Serial.println(" NE");
   }
-  else if(valorAnalog >= 490 && valorAnalog <= 500){
+  else if(valorAnalog >= 400 && valorAnalog <= 600){
     Serial.println(" N");
   }
 
