@@ -177,7 +177,7 @@ void printValues() {
 
   Serial.print("Humidity = ");
   Serial.print(bme.readHumidity());
-  Serial.println(" %");
+  Serial.println(" % ");
 
   /********************************************
                     ANEMÔMETRO
