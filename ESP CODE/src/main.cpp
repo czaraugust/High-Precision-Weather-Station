@@ -224,30 +224,30 @@ if (generalCount >= 17280){ //24 horas
                   ANEMOSCÓPIO
 *********************************************/
 valorAnalog = analogRead(0);
-//Serial.println(valorAnalog);
+ //Serial.println(valorAnalog);
 
-  if(valorAnalog >= 100 && valorAnalog < 135){
+  if(valorAnalog < 140){
     Serial.println(" NO");
   }
-  else if(valorAnalog >= 135 && valorAnalog < 155){
+  else if(valorAnalog >= 140 && valorAnalog < 170){
     Serial.println(" O");
   }
-  else if(valorAnalog >= 155 && valorAnalog < 175){
+  else if(valorAnalog >= 170 && valorAnalog < 190){
     Serial.println(" SO");
   }
-  else if(valorAnalog >= 175 && valorAnalog < 200){
+  else if(valorAnalog >= 190 && valorAnalog < 220){
     Serial.println(" S");
   }
-  else if(valorAnalog >= 200 && valorAnalog <= 240){
+  else if(valorAnalog >= 220 && valorAnalog <= 285){
     Serial.println(" SE");
   }
-  else if(valorAnalog >= 240 && valorAnalog <= 300){
+  else if(valorAnalog >= 285 && valorAnalog <= 390){
     Serial.println(" E");
   }
-  else if(valorAnalog >= 300 && valorAnalog <= 400){
+  else if(valorAnalog >= 390 && valorAnalog <= 550){
     Serial.println(" NE");
   }
-  else if(valorAnalog >= 400 && valorAnalog <= 600){
+  else if(valorAnalog >= 600){
     Serial.println(" N");
   }
 

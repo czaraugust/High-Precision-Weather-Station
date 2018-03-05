@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/edge/Documentos/High-Precision-Weather-Station/PCB/Weather-Station.sch)
-    (date "Ter 16 Jan 2018 17:17:44 -03")
+    (date "Qui 18 Jan 2018 13:48:37 -03")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -77,7 +77,7 @@
       (tstamp 5A5E493F))
     (comp (ref U1)
       (value AP1117-33)
-      (footprint TO_SOT_Packages_SMD:SOT-223-3_TabPin2)
+      (footprint TO_SOT_Packages_SMD:SOT-223)
       (libsource (lib regul) (part AP1117-33))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A5E4D51))
@@ -329,10 +329,10 @@
         (pin (num 2) (name B) (type passive))
         (pin (num 3) (name C) (type passive)))))
   (libraries
-    (library (logical device)
-      (uri /usr/share/kicad/library/device.lib))
     (library (logical switches)
       (uri /usr/share/kicad/library/switches.lib))
+    (library (logical device)
+      (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
     (library (logical regul)
