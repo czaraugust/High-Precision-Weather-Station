@@ -159,28 +159,6 @@ F 3 "" H 2250 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x04 J7
-U 1 1 5A5E7C94
-P 2000 2700
-F 0 "J7" H 2000 2900 50  0000 C CNN
-F 1 "FTDI" H 2000 2400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 2000 2700 50  0001 C CNN
-F 3 "" H 2000 2700 50  0001 C CNN
-	1    2000 2700
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR01
-U 1 1 5A5E7E47
-P 2250 2850
-F 0 "#PWR01" H 2250 2600 50  0001 C CNN
-F 1 "GND" H 2250 2700 50  0000 C CNN
-F 2 "" H 2250 2850 50  0001 C CNN
-F 3 "" H 2250 2850 50  0001 C CNN
-	1    2250 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR02
 U 1 1 5A5E8030
 P 1500 3400
@@ -212,17 +190,6 @@ F 2 "" H 2150 4300 50  0001 C CNN
 F 3 "" H 2150 4300 50  0001 C CNN
 	1    2150 4300
 	-1   0    0    1   
-$EndComp
-$Comp
-L R R4
-U 1 1 5A5E848D
-P 6450 4000
-F 0 "R4" V 6350 4000 50  0000 C CNN
-F 1 "10K" V 6450 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6380 4000 50  0001 C CNN
-F 3 "" H 6450 4000 50  0001 C CNN
-	1    6450 4000
-	1    0    0    -1  
 $EndComp
 $Comp
 L SW_Push SW2
@@ -269,17 +236,6 @@ F 3 "" H 3700 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
-U 1 1 5A5E8FA0
-P 6550 4000
-F 0 "R6" V 6630 4000 50  0000 C CNN
-F 1 "10K" V 6550 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 6480 4000 50  0001 C CNN
-F 3 "" H 6550 4000 50  0001 C CNN
-	1    6550 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R7
 U 1 1 5A5E93FF
 P 6550 3250
@@ -290,36 +246,6 @@ F 3 "" H 6550 3250 50  0001 C CNN
 	1    6550 3250
 	0    1    1    0   
 $EndComp
-$Comp
-L R R8
-U 1 1 5A5E9452
-P 7300 3900
-F 0 "R8" V 7380 3900 50  0000 C CNN
-F 1 "10K" V 7300 3900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 7230 3900 50  0001 C CNN
-F 3 "" H 7300 3900 50  0001 C CNN
-	1    7300 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L SW_Push_SPDT SW1
-U 1 1 5A5E955A
-P 3000 3050
-F 0 "SW1" H 3000 3220 50  0000 C CNN
-F 1 "SW_Push_SPDT" H 3000 2850 50  0000 C CNN
-F 2 "Buttons_Switches_ThroughHole:SW_Micro_SPST" H 3000 3050 50  0001 C CNN
-F 3 "" H 3000 3050 50  0001 C CNN
-	1    3000 3050
-	-1   0    0    1   
-$EndComp
-Text GLabel 6300 2650 2    60   Input ~ 0
-TXD
-Text GLabel 6300 2750 2    60   Input ~ 0
-RXD
-Text GLabel 2300 2500 2    60   Input ~ 0
-TXD
-Text GLabel 2300 2600 2    60   Input ~ 0
-RXD
 $Comp
 L GND #PWR06
 U 1 1 5A5EAEB2
@@ -443,40 +369,6 @@ F 3 "" H 2300 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L SW_SPDT SW3
-U 1 1 5AE74020
-P 7600 3650
-F 0 "SW3" H 7600 3820 50  0000 C CNN
-F 1 "SW_SPDT" H 7600 3450 50  0000 C CNN
-F 2 "Buttons_Switches_ThroughHole:SW_Micro_SPST" H 7600 3650 50  0001 C CNN
-F 3 "" H 7600 3650 50  0001 C CNN
-	1    7600 3650
-	1    0    0    -1  
-$EndComp
-NoConn ~ 7800 3550
-$Comp
-L GND #PWR017
-U 1 1 5AE74368
-P 7850 3800
-F 0 "#PWR017" H 7850 3550 50  0001 C CNN
-F 1 "GND" H 7850 3650 50  0000 C CNN
-F 2 "" H 7850 3800 50  0001 C CNN
-F 3 "" H 7850 3800 50  0001 C CNN
-	1    7850 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR018
-U 1 1 5AE786A0
-P 6550 4250
-F 0 "#PWR018" H 6550 4000 50  0001 C CNN
-F 1 "GND" H 6550 4100 50  0000 C CNN
-F 2 "" H 6550 4250 50  0001 C CNN
-F 3 "" H 6550 4250 50  0001 C CNN
-	1    6550 4250
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R11
 U 1 1 5AE78807
 P 4300 4000
@@ -532,21 +424,7 @@ F 3 "" H 4200 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 2800 2250 2800
-Wire Wire Line
-	2250 2800 2250 2850
-Wire Wire Line
-	2200 2700 2600 2700
-Wire Wire Line
-	2600 2700 2600 2950
-Wire Wire Line
-	2600 2950 2800 2950
-Wire Wire Line
-	2450 3250 2650 3250
-Wire Wire Line
-	2650 3150 2650 3300
-Wire Wire Line
-	2650 3150 2800 3150
+	2450 3250 3200 3250
 Wire Wire Line
 	1450 3250 1850 3250
 Wire Wire Line
@@ -573,12 +451,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 1550 4000 1600
 Connection ~ 4000 1600
-Wire Wire Line
-	2200 2500 2300 2500
-Wire Wire Line
-	2200 2600 2300 2600
-Wire Wire Line
-	1750 4800 7300 4800
 Wire Wire Line
 	6700 4250 10200 4250
 Wire Wire Line
@@ -640,15 +512,6 @@ Wire Wire Line
 	2300 3600 2150 3600
 Connection ~ 2150 3600
 Wire Wire Line
-	6300 3650 7400 3650
-Wire Wire Line
-	7300 3750 7300 3650
-Connection ~ 7300 3650
-Wire Wire Line
-	7800 3750 7850 3750
-Wire Wire Line
-	7850 3750 7850 3800
-Wire Wire Line
 	6300 3250 6400 3250
 Wire Wire Line
 	3850 2500 4450 2500
@@ -663,13 +526,6 @@ Wire Wire Line
 Wire Wire Line
 	7550 2850 6300 2850
 Wire Wire Line
-	6550 3750 6550 3850
-Wire Wire Line
-	7300 4800 7300 4050
-Connection ~ 3200 3050
-Wire Wire Line
-	6550 4150 6550 4250
-Wire Wire Line
 	4300 3800 4300 3850
 Wire Wire Line
 	4300 4250 4300 4150
@@ -679,10 +535,8 @@ Wire Wire Line
 	3900 4250 3900 4300
 Wire Wire Line
 	6300 2350 6500 2350
-Connection ~ 3200 4800
 Wire Wire Line
-	6700 3250 6700 4800
-Connection ~ 6700 4800
+	6700 4800 6700 3250
 Connection ~ 6700 3400
 Wire Wire Line
 	9800 2950 9800 3050
@@ -719,7 +573,6 @@ $EndComp
 Wire Wire Line
 	1750 3300 1750 3250
 Connection ~ 1750 3250
-Connection ~ 2650 3250
 $Comp
 L GND #PWR022
 U 1 1 5AE7D2C5
@@ -1009,34 +862,6 @@ ADC1_CH4
 Wire Wire Line
 	1750 4700 2550 4700
 Connection ~ 2150 4700
-$Comp
-L R R16
-U 1 1 5B2969BC
-P 4200 3600
-F 0 "R16" V 4100 3600 50  0000 C CNN
-F 1 "10K" V 4200 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 4130 3600 50  0001 C CNN
-F 3 "" H 4200 3600 50  0001 C CNN
-	1    4200 3600
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR026
-U 1 1 5B296AF3
-P 4000 3700
-F 0 "#PWR026" H 4000 3450 50  0001 C CNN
-F 1 "GND" H 4000 3550 50  0000 C CNN
-F 2 "" H 4000 3700 50  0001 C CNN
-F 3 "" H 4000 3700 50  0001 C CNN
-	1    4000 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4350 3600 4450 3600
-Wire Wire Line
-	4050 3600 4000 3600
-Wire Wire Line
-	4000 3600 4000 3700
 NoConn ~ 4450 3500
 $Comp
 L Conn_01x19 J10
@@ -1048,17 +873,6 @@ F 2 "Pin_Headers:Pin_Header_Straight_1x19_Pitch2.54mm" H 4650 3300 50  0001 C CN
 F 3 "" H 4650 3300 50  0001 C CNN
 	1    4650 3300
 	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x19 J11
-U 1 1 5B61B9B2
-P 6100 3250
-F 0 "J11" H 6100 4250 50  0000 C CNN
-F 1 "Conn_01x19" H 6100 2250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x19_Pitch2.54mm" H 6100 3250 50  0001 C CNN
-F 3 "" H 6100 3250 50  0001 C CNN
-	1    6100 3250
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	4450 3700 4200 3700
@@ -1081,14 +895,31 @@ F 3 "" H 6450 2950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6300 2950 6450 2950
-Wire Wire Line
-	6300 3750 6550 3750
-Wire Wire Line
-	6300 3850 6450 3850
-Wire Wire Line
-	6450 4150 6450 4800
-Connection ~ 6450 4800
 NoConn ~ 6300 3950
 NoConn ~ 6300 4050
 NoConn ~ 6300 4150
+Connection ~ 3200 3250
+Wire Wire Line
+	2650 3300 2650 3250
+Connection ~ 2650 3250
+NoConn ~ 6300 2650
+NoConn ~ 6300 2750
+NoConn ~ 4450 3600
+NoConn ~ 6300 3650
+NoConn ~ 6300 3750
+$Comp
+L Conn_01x19 J11
+U 1 1 5B61B9B2
+P 6100 3250
+F 0 "J11" H 6100 4250 50  0000 C CNN
+F 1 "Conn_01x19" H 6100 2250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x19_Pitch2.54mm" H 6100 3250 50  0001 C CNN
+F 3 "" H 6100 3250 50  0001 C CNN
+	1    6100 3250
+	-1   0    0    1   
+$EndComp
+NoConn ~ 6300 3850
+Wire Wire Line
+	1750 4800 6700 4800
+Connection ~ 3200 4800
 $EndSCHEMATC
