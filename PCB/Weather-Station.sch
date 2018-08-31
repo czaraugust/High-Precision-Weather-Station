@@ -942,90 +942,194 @@ SDA
 $Comp
 L Conn_01x02 J8
 U 1 1 5B89B2A2
-P 2050 6850
-F 0 "J8" H 2050 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 2050 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 2050 6850 50  0001 C CNN
-F 3 "" H 2050 6850 50  0001 C CNN
-	1    2050 6850
-	0    1    1    0   
+P 1950 6850
+F 0 "J8" H 1950 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 1950 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 1950 6850 50  0001 C CNN
+F 3 "" H 1950 6850 50  0001 C CNN
+	1    1950 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J9
 U 1 1 5B89B345
-P 3250 6850
-F 0 "J9" H 3250 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 3250 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 3250 6850 50  0001 C CNN
-F 3 "" H 3250 6850 50  0001 C CNN
-	1    3250 6850
-	0    1    1    0   
+P 3150 6850
+F 0 "J9" H 3150 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 3150 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 3150 6850 50  0001 C CNN
+F 3 "" H 3150 6850 50  0001 C CNN
+	1    3150 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J10
 U 1 1 5B89B3D6
-P 4000 6850
-F 0 "J10" H 4000 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 4000 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 4000 6850 50  0001 C CNN
-F 3 "" H 4000 6850 50  0001 C CNN
-	1    4000 6850
-	0    1    1    0   
+P 3900 6850
+F 0 "J10" H 3900 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 3900 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 3900 6850 50  0001 C CNN
+F 3 "" H 3900 6850 50  0001 C CNN
+	1    3900 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J11
 U 1 1 5B89B573
-P 5200 6850
-F 0 "J11" H 5200 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 5200 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 5200 6850 50  0001 C CNN
-F 3 "" H 5200 6850 50  0001 C CNN
-	1    5200 6850
-	0    1    1    0   
+P 5100 6850
+F 0 "J11" H 5100 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 5100 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 5100 6850 50  0001 C CNN
+F 3 "" H 5100 6850 50  0001 C CNN
+	1    5100 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J12
 U 1 1 5B89B5F6
-P 5900 6850
-F 0 "J12" H 5900 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 5900 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 5900 6850 50  0001 C CNN
-F 3 "" H 5900 6850 50  0001 C CNN
-	1    5900 6850
-	0    1    1    0   
+P 5800 6850
+F 0 "J12" H 5800 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 5800 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 5800 6850 50  0001 C CNN
+F 3 "" H 5800 6850 50  0001 C CNN
+	1    5800 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J13
 U 1 1 5B89B689
-P 7100 6850
-F 0 "J13" H 7100 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 7100 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 7100 6850 50  0001 C CNN
-F 3 "" H 7100 6850 50  0001 C CNN
-	1    7100 6850
-	0    1    1    0   
+P 7000 6850
+F 0 "J13" H 7000 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 7000 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 7000 6850 50  0001 C CNN
+F 3 "" H 7000 6850 50  0001 C CNN
+	1    7000 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J14
 U 1 1 5B89B7C7
-P 7900 6850
-F 0 "J14" H 7900 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 7900 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 7900 6850 50  0001 C CNN
-F 3 "" H 7900 6850 50  0001 C CNN
-	1    7900 6850
-	0    1    1    0   
+P 7800 6850
+F 0 "J14" H 7800 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 7800 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 7800 6850 50  0001 C CNN
+F 3 "" H 7800 6850 50  0001 C CNN
+	1    7800 6850
+	0    -1   1    0   
 $EndComp
 $Comp
 L Conn_01x02 J15
 U 1 1 5B89B894
-P 9100 6850
-F 0 "J15" H 9100 6950 50  0000 C CNN
-F 1 "Conn_01x02" H 9100 6650 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 9100 6850 50  0001 C CNN
-F 3 "" H 9100 6850 50  0001 C CNN
-	1    9100 6850
-	0    1    1    0   
+P 9000 6850
+F 0 "J15" H 9000 6950 50  0000 C CNN
+F 1 "Conn_01x02" H 9000 6650 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_2pol" H 9000 6850 50  0001 C CNN
+F 3 "" H 9000 6850 50  0001 C CNN
+	1    9000 6850
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND #PWR040
+U 1 1 5AE78CB9
+P 7600 2350
+F 0 "#PWR040" H 7600 2100 50  0001 C CNN
+F 1 "GND" H 7600 2200 50  0000 C CNN
+F 2 "" H 7600 2350 50  0001 C CNN
+F 3 "" H 7600 2350 50  0001 C CNN
+	1    7600 2350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7350 2500 2    60   Input ~ 0
+MOSI
+Text GLabel 7350 3400 2    60   Input ~ 0
+CS
+Text GLabel 7350 3100 2    60   Input ~ 0
+MISO
+Text GLabel 7350 3200 2    60   Input ~ 0
+SCK
+Text GLabel 9700 1900 3    60   Input ~ 0
+CS
+Text GLabel 9800 1900 3    60   Input ~ 0
+MOSI
+Text GLabel 9900 1900 3    60   Input ~ 0
+MISO
+Text GLabel 10000 1900 3    60   Input ~ 0
+SCK
+Text GLabel 10100 1900 3    60   Input ~ 0
+SCL
+Text GLabel 10200 1900 3    60   Input ~ 0
+SDA
+$Comp
+L GND #PWR041
+U 1 1 5B8A1817
+P 10300 2100
+F 0 "#PWR041" H 10300 1850 50  0001 C CNN
+F 1 "GND" H 10300 1950 50  0000 C CNN
+F 2 "" H 10300 2100 50  0001 C CNN
+F 3 "" H 10300 2100 50  0001 C CNN
+	1    10300 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR042
+U 1 1 5B8A1889
+P 10450 2100
+F 0 "#PWR042" H 10450 1950 50  0001 C CNN
+F 1 "+5V" H 10450 2240 50  0000 C CNN
+F 2 "" H 10450 2100 50  0001 C CNN
+F 3 "" H 10450 2100 50  0001 C CNN
+	1    10450 2100
+	-1   0    0    1   
+$EndComp
+NoConn ~ 7350 3500
+NoConn ~ 5500 2650
+NoConn ~ 5500 2750
+NoConn ~ 5500 2850
+NoConn ~ 5500 2950
+NoConn ~ 5500 3350
+NoConn ~ 5500 3450
+$Comp
+L PWR_FLAG #FLG043
+U 1 1 5B8A26A8
+P 2550 2550
+F 0 "#FLG043" H 2550 2625 50  0001 C CNN
+F 1 "PWR_FLAG" H 2550 2700 50  0000 C CNN
+F 2 "" H 2550 2550 50  0001 C CNN
+F 3 "" H 2550 2550 50  0001 C CNN
+	1    2550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 5B89B8F1
+P 2300 4750
+F 0 "R9" V 2380 4750 50  0000 C CNN
+F 1 "10k" V 2300 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2230 4750 50  0001 C CNN
+F 3 "" H 2300 4750 50  0001 C CNN
+	1    2300 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5B89B990
+P 2700 4750
+F 0 "R10" V 2780 4750 50  0000 C CNN
+F 1 "10k" V 2700 4750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2630 4750 50  0001 C CNN
+F 3 "" H 2700 4750 50  0001 C CNN
+	1    2700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR044
+U 1 1 5B89BEF6
+P 2500 4500
+F 0 "#PWR044" H 2500 4350 50  0001 C CNN
+F 1 "+5V" H 2500 4640 50  0000 C CNN
+F 2 "" H 2500 4500 50  0001 C CNN
+F 3 "" H 2500 4500 50  0001 C CNN
+	1    2500 4500
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3200 1050 3250 1050
@@ -1377,62 +1481,9 @@ Wire Wire Line
 	8950 5950 9100 5950
 Wire Wire Line
 	9100 5950 9100 6650
-$Comp
-L GND #PWR040
-U 1 1 5AE78CB9
-P 7600 2350
-F 0 "#PWR040" H 7600 2100 50  0001 C CNN
-F 1 "GND" H 7600 2200 50  0000 C CNN
-F 2 "" H 7600 2350 50  0001 C CNN
-F 3 "" H 7600 2350 50  0001 C CNN
-	1    7600 2350
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7600 2350 7550 2350
 Connection ~ 7550 2350
-Text GLabel 7350 2500 2    60   Input ~ 0
-MOSI
-Text GLabel 7350 3400 2    60   Input ~ 0
-CS
-Text GLabel 7350 3100 2    60   Input ~ 0
-MISO
-Text GLabel 7350 3200 2    60   Input ~ 0
-SCK
-Text GLabel 9700 1900 3    60   Input ~ 0
-CS
-Text GLabel 9800 1900 3    60   Input ~ 0
-MOSI
-Text GLabel 9900 1900 3    60   Input ~ 0
-MISO
-Text GLabel 10000 1900 3    60   Input ~ 0
-SCK
-Text GLabel 10100 1900 3    60   Input ~ 0
-SCL
-Text GLabel 10200 1900 3    60   Input ~ 0
-SDA
-$Comp
-L GND #PWR041
-U 1 1 5B8A1817
-P 10300 2100
-F 0 "#PWR041" H 10300 1850 50  0001 C CNN
-F 1 "GND" H 10300 1950 50  0000 C CNN
-F 2 "" H 10300 2100 50  0001 C CNN
-F 3 "" H 10300 2100 50  0001 C CNN
-	1    10300 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR042
-U 1 1 5B8A1889
-P 10450 2100
-F 0 "#PWR042" H 10450 1950 50  0001 C CNN
-F 1 "+5V" H 10450 2240 50  0000 C CNN
-F 2 "" H 10450 2100 50  0001 C CNN
-F 3 "" H 10450 2100 50  0001 C CNN
-	1    10450 2100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	10300 1900 10300 2100
 Wire Wire Line
@@ -1441,27 +1492,21 @@ Wire Wire Line
 	10400 2000 10450 2000
 Wire Wire Line
 	10450 2000 10450 2100
-NoConn ~ 7350 3500
-NoConn ~ 5500 2650
-NoConn ~ 5500 2750
-NoConn ~ 5500 2850
-NoConn ~ 5500 2950
-NoConn ~ 5500 3350
-NoConn ~ 5500 3450
-$Comp
-L PWR_FLAG #FLG043
-U 1 1 5B8A26A8
-P 2550 2550
-F 0 "#FLG043" H 2550 2625 50  0001 C CNN
-F 1 "PWR_FLAG" H 2550 2700 50  0000 C CNN
-F 2 "" H 2550 2550 50  0001 C CNN
-F 3 "" H 2550 2550 50  0001 C CNN
-	1    2550 2550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2550 2550 2550 2600
 Connection ~ 2550 2600
 Wire Wire Line
 	2850 2600 2850 2550
+Wire Wire Line
+	2300 4900 2300 5100
+Connection ~ 2300 5100
+Wire Wire Line
+	2700 4900 2700 5200
+Connection ~ 2700 5200
+Wire Wire Line
+	2300 4600 2300 4550
+Wire Wire Line
+	2300 4550 2700 4550
+Wire Wire Line
+	2700 4550 2700 4600
 $EndSCHEMATC
