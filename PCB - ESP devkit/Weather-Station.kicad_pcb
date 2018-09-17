@@ -3,7 +3,7 @@
   (general
     (links 95)
     (no_connects 0)
-    (area 102.424999 27.424999 167.575001 95.075001)
+    (area 88.900001 18.5 167.600001 103.450001)
     (thickness 1.6)
     (drawings 16)
     (tracks 266)
@@ -87,7 +87,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory Gerber/))
+      (outputdirectory Gerber-Estacao_DevKit/))
   )
 
   (net 0 "")
